@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <style type="text/css">
+     table, td, th {  
+     
+     text-align: left;
+   }
+   
+   table {
+     border-collapse: collapse;
+     width: 50%;
+    
+   }
+   .table-data{
+       position: relative;
+       left:50px;
+     top:50px;
+   }
+   th, td {
+     padding: 15px;
+   }
+   input.right {
+        float: right;
+        
+      }
+      input{
+        background-color: skyblue; 
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px
+      }
+
+ </style>
+</head>                                                                                               
+<body>
+<!--====form section start====-->
+    <div class="table-data">
+    <table align="left">
+        <h1 align="left  ">Department Details</h1>
+        <a href="http://localhost:3000/department/create">
+            <input type="button" value="Add Department" class="right"></a>
+        <tr>
+            
+            <th>Department Name</th>
+            <th>Department Id</th>
+            
+            
+        </tr>
+        
+        <%
+        if(userData.length!=0){
+        var i=1;
+        userData.forEach(function(data){
+        %>
+        <tr>
+            
+            <td><a href="http://localhost:3000/department/<%=data.department_id%>"><%=data.dept_name %></td></a>
+            <td> <%=data.department_id %></td>
+          
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+</body>
+</html>

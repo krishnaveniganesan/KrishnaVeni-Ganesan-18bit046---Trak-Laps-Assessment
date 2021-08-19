@@ -1,0 +1,18 @@
+<html>
+  <form id="reg" name="form1" method="POST" action="employee">
+    
+    <h2>Select Employee</h2>
+    <div id="checkboxes">
+        
+      <% newEmpData.map((t)=>{ %>
+      <label for="<%= t.emp_name %>">
+        <input type="checkbox" name="checkboxName" value="<%= t.employee_id %>" /><%= t.emp_name %></label><br>
+       
+  <% }) %></div>
+  <br>
+  <br>
+  <button type="submit"  value="Add">Submit</button>
+  </form>
+  
+
+</html>

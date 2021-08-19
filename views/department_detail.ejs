@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <style type="text/css">
+     table, td, th {  
+     
+     text-align: left;
+   }
+   
+   table {
+     border-collapse: collapse;
+     width: 90%;
+    
+   }
+   .table-data{
+       position: relative;
+     left:50px;
+     top:50px;
+   }
+   th, td {
+     padding: 15px;
+   }
+   input.right {
+        float: right;
+        
+      }
+      input{
+        background-color: skyblue; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px
+      }
+ </style>
+</head>
+<body>
+  <a href="http://localhost:3000/department/<%=deptId %>/add/employee">
+    <input type="button" value="Select Employee" class="right"></a>
+  
+    <div class="table-data">
+    <table align="left">
+        <h1 align="left">Employee Detail</h1>
+        
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>DOB</th>
+            <th>Phone</th>
+            <th>Address</th>
+            
+        </tr>
+        
+        <%
+        if(userData.length!=0){
+        var i=1;
+        userData.forEach(function(data){
+        %>
+        <tr>
+            
+            <td><%=data.emp_name %></td>
+            <td><%=data.email %></td>
+            <td><%=data.date_of_birth%></td>
+            <td><%=data.phone %></td>
+            <td><%=data.address %></td>
+            
+            
+            
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+    <script>
+      var expanded = false;
+  
+      function showCheckboxes() {
+        var checkboxes = document.getElementById("checkboxes");
+        if (!expanded) {
+          checkboxes.style.display = "block";
+          expanded = true;
+        } else {
+          checkboxes.style.display = "none";
+          expanded = false;
+        }
+      } 
+    
+  </script>
+</body>
+</html>

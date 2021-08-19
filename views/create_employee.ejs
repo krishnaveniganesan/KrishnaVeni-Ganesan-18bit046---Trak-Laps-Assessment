@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <style type="text/css">
+        
+
+            
+       #reg
+       {
+        margin-left:450px;
+       }     
+
+input[type=text] {
+  font-size:15px;
+  width: 40%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  display: inline-block;
+  
+}
+div{
+    padding: 5px 5px ; 
+margin:10px 50px 30px 50px;
+background: skyblue;
+}
+            input[type=date]
+            {
+                width:40%;
+                padding:8px 10px;
+                margin:10px 0;
+                display :inline-block;
+                box-sizing:border-box;
+            }
+            input[type=email]
+            {
+                width:40%;
+                padding:8px 20px;
+                margin:10px 0;
+                display :inline-block;
+                box-sizing:border-box;
+            }
+            input[type=text]
+            {
+                width:40%;
+                padding:8px 20px;
+                margin:10px 0;
+                display :inline-block;
+                box-sizing:border-box;
+            }
+            input[type=submit]
+            {
+                text-align:center;
+                width:10%;
+                padding:5px 10px;
+                margin: 8px 50px;
+                display :inline-block;
+                box-sizing:border-box;
+            }
+            button[type=Cancel]
+            {
+                width:10%;
+                padding:5px 10px;
+                margin:8px 50px;
+                display :inline-block;
+                box-sizing:border-box;
+            }
+        
+         </style>
+    </head>
+<body>
+    <div class="center">
+        
+    <form id="reg" name="create" method="POST" action="create">
+    
+        <h1> Employee</h1>
+        <label>Name</label><br>
+        <input type="text" name="name" ><br>
+        <label>Email</label><br>
+        <input type="email" name="email" ><br>
+        <label>DOB</label><br>
+        <input type="date" name="dob" > <br>
+        <label>Phone</label><br>
+        <input type="text" name="phone"><br>
+        <label>Address</label><br>
+        <input type="text" name="address" ><br>
+        <input type="submit" name="apply" class="submit">
+        <a href="http://localhost:3000/employees/all">
+        <input type="button" value="Cancel"></a>
+    
+        
+    </form>   
+</div>
+</body>
+</html>
